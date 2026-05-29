@@ -1,0 +1,22 @@
+[
+    {
+        "product_id": "L01",
+        "name": "Laptop-dell",
+        "base_price": 200000.0,
+        "stock": 29,
+        "warranty_months": 5,
+        "type": "Laptop",
+        "ram": "32GB",
+        "cpu": "Core i7"
+    },
+    {
+        "product_id": "P01",
+        "name": "Lenovo",
+        "base_price": 200000000.0,
+        "stock": 10,
+        "warranty_months": 6,
+        "type": "Phone",
+        "battery": "5000mAh",
+        "camera": "108MP"
+    }
+]
