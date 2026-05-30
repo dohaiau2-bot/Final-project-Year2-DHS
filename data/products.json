@@ -18,5 +18,14 @@
         "type": "Phone",
         "battery": "5000mAh",
         "camera": "108MP"
+    },
+    {
+        "product_id": "F01",
+        "name": "Fridge1",
+        "base_price": 1000000.0,
+        "stock": 10,
+        "warranty_months": 5,
+        "type": "Fridge",
+        "capacity": 8
     }
 ]
