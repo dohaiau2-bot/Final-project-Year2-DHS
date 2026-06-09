@@ -50,7 +50,8 @@ class MenuView:
                     print("Cảm ơn bạn đã sử dụng hệ thống! Dữ liệu đã được lưu an toàn.")
                     break
                 else:
-                    print("⚠️ Lựa chọn không hợp lệ, vui lòng chọn lại từ 0 đến 8.")
+                    # RÀNG BUỘC MENU CHÍNH: Nhập số lạ hoặc chữ sẽ báo lỗi và lặp lại
+                    print("⚠️ Lựa chọn không hợp lệ! Vui lòng chọn đúng các số theo câu lệnh (từ 0 đến 8).")
             except Exception as e:
                 print(f"❌ Đã xảy ra lỗi hệ thống: {e}")
 
@@ -67,13 +68,16 @@ class MenuView:
             print(f"{p.product_id:<8} | {p.name:<20} | {p.__class__.__name__:<8} | {final_price:<15} | {p.stock:<5} | {p.get_specs()}")
 
     def add_product_menu(self):
-        print("Chọn loại sản phẩm cần thêm:")
-        print("1. Laptop | 2. Phone | 3. Fridge")
-        p_type = input("Nhập (1-3): ").strip()
-        
-        if p_type not in ["1", "2", "3"]:
-            print("⚠️ Loại sản phẩm không hợp lệ.")
-            return
+        # Sử dụng vòng lặp để bắt buộc nhập đúng 1, 2, hoặc 3
+        while True:
+            print("Chọn loại sản phẩm cần thêm:")
+            print("1. Laptop | 2. Phone | 3. Fridge")
+            p_type = input("Nhập (1-3): ").strip()
+            
+            if p_type in ["1", "2", "3"]:
+                break # Đã nhập đúng, thoát vòng lặp để nhập tiếp thông tin
+            else:
+                print("⚠️ Lựa chọn không hợp lệ! Vui lòng chọn đúng số theo câu lệnh (1, 2 hoặc 3).\n")
 
         p_id = input("Nhập mã sản phẩm (Ví dụ: L01, P01): ").strip()
         name = input("Nhập tên sản phẩm: ").strip()
