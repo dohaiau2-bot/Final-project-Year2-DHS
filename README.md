@@ -58,10 +58,11 @@ Dự án được phân tách nghiêm ngặt thành **3 tầng độc lập (3-T
        │     - models/product.py (OOP Encapsulation/Inherit)    │
        │     - services/database.py (Khởi tạo kết nối SQLite)   │
        └────────────────────────────────────────────────────────┘
+
+
 # V. BẢNG TỰ CHẤM ĐIỂM (CRITERIA EVALUATION MATRIX)
 
 Dưới đây là bảng đối chiếu chi tiết giữa barem yêu cầu đạt điểm tuyệt đối (10.0/10.0) của học phần Phương pháp lập trình do Thầy Long phụ trách và cách thức triển khai thực tế trong mã nguồn dự án của em:
-
 
 | Thành phần (Component) | Tiêu chí chi tiết chấm điểm | Giải thích cơ chế & Cách thức thực hiện chi tiết trong mã nguồn dự án | Trạng thái | Điểm tự chấm |
 | :--- | :--- | :--- | :---: | :---: |
