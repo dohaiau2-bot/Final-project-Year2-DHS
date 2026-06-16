@@ -59,15 +59,7 @@ Dự án được phân tách nghiêm ngặt thành **3 tầng độc lập (3-T
        │     - services/database.py (Khởi tạo kết nối SQLite)   │
        └────────────────────────────────────────────────────────┘
 
-#IV. Bảng tự chấm điểm:
-
-# Supermarket-Electronics-Management
-Enterprise-Level Mini Project for Programming Methods Course
-
-## I. GIỚI THIỆU HỆ THỐNG
-Dự án Hệ thống Quản lý Siêu thị Điện máy Đa phân tầng được xây dựng theo mô hình Lập trình hướng đối tượng (OOP) chuyên sâu kết hợp với kiến trúc phân tầng chuẩn doanh nghiệp (Layered Architecture - 3 Layers) bằng ngôn ngữ Python.
-
-## II. BẢNG TỰ CHẤM ĐIỂM (CRITERIA EVALUATION MATRIX)
+##IV. Bảng tự chấm điểm:
 
 | Thành phần | Tiêu chí chi tiết chấm điểm | Giải thích cơ chế & Cách thức thực hiện trong dự án | Trạng thái | Điểm |
 | :--- | :--- | :--- | :---: | :---: |
