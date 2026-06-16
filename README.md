@@ -65,7 +65,9 @@ Dự án được phân tách nghiêm ngặt thành **3 tầng độc lập (3-T
 Dưới đây là bảng đối chiếu chi tiết giữa barem yêu cầu đạt điểm tuyệt đối (10.0/10.0) của học phần Phương pháp lập trình do Thầy Long phụ trách và cách thức triển khai thực tế trong mã nguồn dự án của em:
 
 | Thành phần (Component) | Tiêu chí chi tiết chấm điểm | Giải thích cơ chế & Cách thức thực hiện chi tiết trong mã nguồn dự án | Trạng thái | Điểm tự chấm |
+
 | :--- | :--- | :--- | :---: | :---: |
+
 | **1. CLI Menu System** | Menu tương tác dùng vòng lặp vô hạn, xử lý lỗi nhập liệu, giao diện có định dạng khung bảng màu sắc ANSI. | Triển khai tại hàm `MenuView.run()` dùng vòng lặp `while True`. Sử dụng các biến mã màu ANSI tiêu chuẩn như `\033[95m` (Tím), `\033[92m` (Xanh lá) để nhuộm màu giao diện. Nếu người dùng nhập sai ký tự lựa chọn, khối `else` sẽ báo lỗi và đẩy menu lặp lại liên tục chứ không sập app. | ✅ Đạt | **1.0 / 1.0** |
 | **2. Data Input & Validation** | Thêm bản ghi mới, kiểm tra và ràng buộc dữ liệu đầu vào không cho phép nhập sai kiểu dữ liệu hoặc giá trị âm. | Trong hàm `add_product_menu()`, toàn bộ các lệnh ép kiểu `float()` và `int()` cho Giá và Số lượng được bao bọc trong khối `try-except ValueError` để chặn người dùng nhập chữ. Đồng thời, tại file `models/product.py`, hàm `@base_price.setter` tích hợp logic chặn dữ liệu âm `if value < 0: raise ValueError(...)`. | ✅ Đạt | **1.0 / 1.0** |
 | **3. Data Display** | In danh sách bản ghi rõ ràng, căn lề chuẩn xác theo dạng bảng, có tính năng bổ trợ thông minh. | Triển khai tại hàm `MenuView.view_products()`. Sử dụng cú pháp `f-string` định dạng độ rộng cột cố định (`{p.name:<22}`, `{final_price:<15}`) giúp các đường biên bảng `\|` thẳng hàng tuyệt đối. Tích hợp tính năng đổi màu text sang màu Đỏ kèm chữ `(Hết)` nếu tồn kho bằng 0 để cảnh báo thủ kho. | ✅ Đạt | **1.0 / 1.0** |
