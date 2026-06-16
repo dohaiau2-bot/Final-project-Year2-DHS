@@ -62,6 +62,7 @@ Dự án được phân tách nghiêm ngặt thành **3 tầng độc lập (3-T
 
 Dưới đây là bảng đối chiếu chi tiết giữa barem yêu cầu đạt điểm tuyệt đối (10.0/10.0) của học phần Phương pháp lập trình do Thầy Long phụ trách và cách thức triển khai thực tế trong mã nguồn dự án của em:
 
+
 | Thành phần (Component) | Tiêu chí chi tiết chấm điểm | Giải thích cơ chế & Cách thức thực hiện chi tiết trong mã nguồn dự án | Trạng thái | Điểm tự chấm |
 | :--- | :--- | :--- | :---: | :---: |
 | **1. CLI Menu System** | Menu tương tác dùng vòng lặp vô hạn, xử lý lỗi nhập liệu, giao diện có định dạng khung bảng màu sắc ANSI. | Triển khai tại hàm `MenuView.run()` dùng vòng lặp `while True`. Sử dụng các biến mã màu ANSI tiêu chuẩn như `\033[95m` (Tím), `\033[92m` (Xanh lá) để nhuộm màu giao diện. Nếu người dùng nhập sai ký tự lựa chọn, khối `else` sẽ báo lỗi và đẩy menu lặp lại liên tục chứ không sập app. | ✅ Đạt | **1.0 / 1.0** |
