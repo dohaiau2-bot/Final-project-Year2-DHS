@@ -41,7 +41,7 @@ class Product(ABC):
     def warranty_months(self):
         return self.__warranty_months
 
-    # TRỪU TƯỢNG (Abstraction): Ép buộc các lớp con phải tự định nghĩa cách tính giá riêng
+    #  Ép buộc các lớp con phải tự định nghĩa cách tính giá riêng
     @abstractmethod
     def calculate_final_price(self) -> float:
         pass
@@ -62,7 +62,7 @@ class Product(ABC):
         }
 
 
-# KẾ THỪA (Inheritance): Laptop kế thừa từ Product
+#  Laptop kế thừa từ Product
 class Laptop(Product):
     def __init__(self, product_id: str, name: str, base_price: float, stock: int, warranty_months: int, ram: str, cpu: str):
         super().__init__(product_id, name, base_price, stock, warranty_months)
@@ -82,14 +82,13 @@ class Laptop(Product):
         return d
 
 
-# KẾ THỪA (Inheritance): Phone kế thừa từ Product
 class Phone(Product):
     def __init__(self, product_id: str, name: str, base_price: float, stock: int, warranty_months: int, battery: str, camera: str):
         super().__init__(product_id, name, base_price, stock, warranty_months)
         self.__battery = battery
         self.__camera = camera
 
-    # ĐA HÌNH (Polymorphism): Phone chịu thuế môi trường pin điện tử cố định 5%
+    # Phone chịu thuế môi trường pin điện tử cố định 5%
     def calculate_final_price(self) -> float:
         return self.base_price * 1.05
 
@@ -102,13 +101,12 @@ class Phone(Product):
         return d
 
 
-# KẾ THỪA (Inheritance): Fridge kế thừa từ Product
 class Fridge(Product):
     def __init__(self, product_id: str, name: str, base_price: float, stock: int, warranty_months: int, capacity: int):
         super().__init__(product_id, name, base_price, stock, warranty_months)
         self.__capacity = capacity
 
-    # ĐA HÌNH (Polymorphism): Tủ lạnh cồng kềnh cộng thêm 200,000đ phí vận chuyển bảo quản
+    #  Tủ lạnh cồng kềnh cộng thêm 200,000đ phí vận chuyển bảo quản
     def calculate_final_price(self) -> float:
         return self.base_price + 200000
 
