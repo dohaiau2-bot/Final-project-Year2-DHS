@@ -43,7 +43,7 @@ class StoreService:
         spec_1, spec_2 = None, None
         p_type = product.__class__.__name__
         
-        # Hack nhẹ để đọc thuộc tính private phục vụ việc lưu trữ database
+        #  đọc thuộc tính private phục vụ việc lưu trữ database
         dict_data = product.to_dict()
         if p_type == "Laptop":
             spec_1, spec_2 = dict_data["ram"], dict_data["cpu"]
